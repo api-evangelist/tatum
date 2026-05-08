@@ -5,31 +5,42 @@ provider: Tatum
 providerId: tatum
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - Web3
 - Blockchain
 - RPC
-- Multi-Chain
-- SDK
+- Multi-chain
+- Wallet
+- NFT
 - Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for Tatum. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: Tatum enforces per-API-key requests-per-second and monthly credit caps.
+  Methods cost different credit amounts.
+notes: RPC Gateway, Data API, and Notifications each have their own pricing.
 sources:
-- https://tatum.io/
+- https://tatum.io/pricing/
+- https://docs.tatum.io/
 responseCodes:
   throttled: 429
 limits:
-- name: Default
+- name: Free RPS
+  scope: api_key
+  metric: requests_per_second
+  limit: 5
+  notes: Free plan.
+- name: Standard RPS
+  scope: api_key
+  metric: requests_per_second
+  limit: 50
+  notes: Standard plan.
+- name: Monthly Credits
   scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  metric: credits
+  limit: see plan
+  notes: Monthly ceiling.
 policies:
 - name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  description: Exponential backoff on 429.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

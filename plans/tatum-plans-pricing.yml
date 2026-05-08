@@ -5,37 +5,108 @@ provider: Tatum
 providerId: tatum
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - Web3
 - Blockchain
 - RPC
-- Multi-Chain
-- SDK
+- Multi-chain
+- Wallet
+- NFT
 - Plans
-description: Placeholder plans/pricing artifact for Tatum. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled against the provider's documentation.
+description: Tatum sells tiered subscriptions with monthly credit allotments and per-second
+  rate limits.
+notes: Verify against tatum.io/pricing.
 sources:
-- https://tatum.io/
+- https://tatum.io/pricing/
 plans:
-- id: tatum-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: tatum-free
+  name: Free
+  type: free
+  description: Free plan with monthly credits.
   entries:
-  - label: API Access
-    name: api_access
-    type: flat
-    metric: varies
-    limit: -1
-    timeFrame: usage
+  - label: Monthly Credits
+    name: monthly_credits
+    type: included
+    metric: credits
+    limit: 1000000
+    timeFrame: month
     geo: global
     unit: 1
-    price: see https://tatum.io/
+    price: 0
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: Community Support
+- id: tatum-start
+  name: Start
+  type: paid
+  description: Entry-level paid plan.
+  entries:
+  - label: Monthly Subscription
+    name: monthly_subscription
+    type: flat
+    metric: subscription
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 9
+    userMultiplied: false
+  elements:
+  - name: Email Support
+- id: tatum-basic
+  name: Basic
+  type: paid
+  description: Higher allotment.
+  entries:
+  - label: Monthly Subscription
+    name: monthly_subscription
+    type: flat
+    metric: subscription
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 49
+    userMultiplied: false
+  elements:
+  - name: Webhooks
+- id: tatum-standard
+  name: Standard
+  type: paid
+  description: Production-grade plan with priority support.
+  entries:
+  - label: Monthly Subscription
+    name: monthly_subscription
+    type: flat
+    metric: subscription
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 249
+    userMultiplied: false
+  elements:
+  - name: Priority Support
+  - name: Higher Throughput
+- id: tatum-enterprise
+  name: Enterprise
+  type: enterprise
+  description: Custom enterprise contracts.
+  entries:
+  - label: Custom
+    name: custom
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: SLAs
+  - name: Dedicated Nodes
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

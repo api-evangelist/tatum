@@ -5,20 +5,20 @@ provider: Tatum
 providerId: tatum
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - Web3
 - Blockchain
 - RPC
-- Multi-Chain
-- SDK
+- Multi-chain
+- Wallet
+- NFT
 - FinOps
-- Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Tatum. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: Tatum bills as monthly subscription with included credits.
+notes: Usage in Tatum dashboard.
 sources:
-- https://tatum.io/
+- https://tatum.io/pricing/
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -29,13 +29,12 @@ alignedWith:
 publisherName: Tatum
 serviceCategory: Web3
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription + Usage
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
   - Usage
   - Purchase
-  - Adjustment
 focusColumns:
   ServiceName: Tatum
   ServiceCategory: Web3
@@ -45,22 +44,29 @@ focusColumns:
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: credits
+  description: API credits consumed per request.
+  unit: credit
   aggregation: sum
   dimensions:
-  - account
-  - resource
+  - api_key
+  - chain
+  - endpoint
+- name: webhook_events
+  description: Webhook events delivered.
+  unit: event
+  aggregation: sum
+  dimensions:
+  - subscription
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Tatum dashboard usage view.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: API key per service/team.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Use Data API instead of raw RPC for indexed queries.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: API key owners review monthly credits.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
