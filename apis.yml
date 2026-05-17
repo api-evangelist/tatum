@@ -1,7 +1,7 @@
 aid: tatum
 url: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/apis.yml
 name: Tatum
-x-type: company
+kind: company
 description: Tatum is a multi-chain Web3 platform offering an RPC Gateway across 130+
   blockchains, indexed Data APIs, Notifications/Webhooks, NFT/Wallet APIs, Smart Contract
   APIs, Virtual Accounts, and a Key Management System (KMS). Both REST and JSON-RPC
