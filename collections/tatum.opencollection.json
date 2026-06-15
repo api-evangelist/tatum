@@ -1,0 +1,89 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tatum Data API",
+    "version": "4.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get native balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tatum.io/v4/data/blockchains/balance"
+          },
+          "docs": "Retrieve native balance for a blockchain address."
+        },
+        {
+          "info": {
+            "name": "Get transaction by hash",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tatum.io/v4/data/blockchains/transaction"
+          },
+          "docs": "Retrieve transaction details using transaction hash."
+        },
+        {
+          "info": {
+            "name": "Get block by hash or height",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tatum.io/v4/data/blockchains/block"
+          },
+          "docs": "Fetch block information by hash or block number."
+        },
+        {
+          "info": {
+            "name": "Get current block height",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tatum.io/v4/data/blockchains/block/current"
+          },
+          "docs": "Obtain the latest block height for supported blockchains."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Rates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get exchange rate by symbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tatum.io/v4/data/rate/symbol"
+          },
+          "docs": "Retrieve current exchange rates for crypto/fiat pairs."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
