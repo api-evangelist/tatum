@@ -115,7 +115,7 @@ common:
     url: rate-limits/tatum-rate-limits.yml
   - type: FinOps
     url: finops/tatum-finops.yml
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.tatum.io/llms.txt
 maintainers:
   - FN: Kin Lane
