@@ -103,6 +103,14 @@ apis:
     - type: Documentation
       url: https://docs.tatum.io/reference/virtual-accounts
 common:
+  - type: TrustCenter
+    url: security/tatum-trust-center.yml
+  - type: DomainSecurity
+    url: security/tatum-domain-security.yml
+  - type: Authentication
+    url: authentication/tatum-authentication.yml
+  - url: https://tatum.io/blog/rss.xml
+    type: Blog
   - type: GitHubOrganization
     url: https://github.com/tatumio
   - type: LinkedIn
