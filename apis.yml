@@ -103,6 +103,8 @@ apis:
     - type: Documentation
       url: https://docs.tatum.io/reference/virtual-accounts
 common:
+  - type: AgenticAccess
+    url: agentic-access/tatum-agentic-access.yml
   - type: TrustCenter
     url: security/tatum-trust-center.yml
   - type: DomainSecurity
