@@ -1,19 +1,24 @@
 openapi: 3.1.0
 info:
   title: Tatum Data API
-  version: "4.0.0"
-  description: |
-    REST API for indexed multi-chain blockchain data including balances,
+  version: 4.0.0
+  description: 'REST API for indexed multi-chain blockchain data including balances,
+
     transactions, blocks, and exchange rates. Authentication uses an API
+
     key provided in the x-api-key header.
+
+    '
   contact:
     name: Tatum
     url: https://docs.tatum.io/reference/rest-api-overview
 servers:
-  - url: https://api.tatum.io
-    description: Production
+- url: https://api.tatum.io
+  description: Production
 security:
-  - apiKeyAuth: []
+- apiKeyAuth: []
+tags:
+- name: Data
 paths:
   /v4/data/blockchains/balance:
     get:
@@ -21,9 +26,9 @@ paths:
       description: Retrieve native balance for a blockchain address.
       operationId: getNativeBalance
       tags:
-        - Data
+      - Data
       responses:
-        "200":
+        '200':
           description: Balance details
   /v4/data/blockchains/transaction:
     get:
@@ -31,9 +36,9 @@ paths:
       description: Retrieve transaction details using transaction hash.
       operationId: getTransaction
       tags:
-        - Data
+      - Data
       responses:
-        "200":
+        '200':
           description: Transaction details
   /v4/data/blockchains/block:
     get:
@@ -41,9 +46,9 @@ paths:
       description: Fetch block information by hash or block number.
       operationId: getBlock
       tags:
-        - Data
+      - Data
       responses:
-        "200":
+        '200':
           description: Block details
   /v4/data/blockchains/block/current:
     get:
@@ -51,26 +56,13 @@ paths:
       description: Obtain the latest block height for supported blockchains.
       operationId: getCurrentBlockHeight
       tags:
-        - Data
+      - Data
       responses:
-        "200":
+        '200':
           description: Current block height
-  /v4/data/rate/symbol:
-    get:
-      summary: Get exchange rate by symbol
-      description: Retrieve current exchange rates for crypto/fiat pairs.
-      operationId: getExchangeRate
-      tags:
-        - Rates
-      responses:
-        "200":
-          description: Exchange rate
 components:
   securitySchemes:
     apiKeyAuth:
       type: apiKey
       in: header
       name: x-api-key
-tags:
-  - name: Data
-  - name: Rates
