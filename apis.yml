@@ -6,7 +6,20 @@ description: Tatum is a multi-chain Web3 platform offering an RPC Gateway across
   blockchains, indexed Data APIs, Notifications/Webhooks, NFT/Wallet APIs, Smart Contract
   APIs, Virtual Accounts, and a Key Management System (KMS). Both REST and JSON-RPC
   interfaces are available.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tatum.png
 tags:
   - Web3
   - Blockchain
@@ -18,90 +31,109 @@ created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-  - aid: tatum:rpc-gateway
-    name: Tatum RPC Gateway
-    description: JSON-RPC over HTTPS to 130+ blockchain networks (Ethereum, Bitcoin,
-      Solana, Polygon, BNB, Avalanche, Algorand, Tron, etc.).
-    humanURL: https://docs.tatum.io/reference/rest-api-overview
-    baseURL: https://api.tatum.io/v3/blockchain/node/{chain}/{apiKey}
-    tags:
-    - JSON-RPC
-    - Multi-chain
-    properties:
-    - type: Documentation
-      url: https://docs.tatum.io/reference/rest-api-overview
-  - aid: tatum:data-api
-    name: Tatum Data API
-    description: REST API for indexed multi-chain blockchain data (balances, NFTs, tokens,
-      transactions, blocks).
-    humanURL: https://docs.tatum.io/reference/rest-api-overview
-    baseURL: https://api.tatum.io/v4/data
-    tags:
-    - REST
-    - Indexing
-    properties:
-    - type: Documentation
-      url: https://docs.tatum.io/reference/rest-api-overview
-  - aid: tatum:notifications
-    name: Tatum Notifications API
-    description: REST API for managing webhook subscriptions for blockchain events.
-    humanURL: https://docs.tatum.io/reference/notification-subscriptions
-    baseURL: https://api.tatum.io/v4/subscription
-    tags:
-    - REST
-    - Webhooks
-    properties:
-    - type: Documentation
-      url: https://docs.tatum.io/reference/notification-subscriptions
-  - aid: tatum:nft-api
-    name: Tatum NFT API
-    description: REST API for NFT minting, transfers, metadata, and ownership queries
-      on multiple chains.
-    humanURL: https://docs.tatum.io/reference/nft
-    baseURL: https://api.tatum.io/v3/nft
-    tags:
-    - REST
-    - NFT
-    properties:
-    - type: Documentation
-      url: https://docs.tatum.io/reference/nft
-  - aid: tatum:wallet-api
-    name: Tatum Wallet API
-    description: REST API to generate wallets, derive addresses, build/sign transactions
-      across many chains.
-    humanURL: https://docs.tatum.io/reference/blockchain-wallet
-    baseURL: https://api.tatum.io/v3
-    tags:
-    - REST
-    - Wallet
-    properties:
-    - type: Documentation
-      url: https://docs.tatum.io/reference/blockchain-wallet
-  - aid: tatum:smart-contract-api
-    name: Tatum Smart Contract API
-    description: REST API to deploy, invoke, and read smart contracts on EVM and other
-      chains.
-    humanURL: https://docs.tatum.io/reference/smart-contracts
-    baseURL: https://api.tatum.io/v3
-    tags:
-    - REST
-    - Smart Contracts
-    properties:
-    - type: Documentation
-      url: https://docs.tatum.io/reference/smart-contracts
-  - aid: tatum:virtual-accounts
-    name: Tatum Virtual Accounts (Ledger)
-    description: REST API for off-chain virtual account ledger with deposit address
-      allocation, transfers, and reconciliation.
-    humanURL: https://docs.tatum.io/reference/virtual-accounts
-    baseURL: https://api.tatum.io/v3/ledger
-    tags:
-    - REST
-    - Ledger
-    - Virtual Accounts
-    properties:
-    - type: Documentation
-      url: https://docs.tatum.io/reference/virtual-accounts
+- aid: tatum:rpc-gateway
+  name: Tatum RPC Gateway
+  description: >-
+    JSON-RPC over HTTPS to 130+ blockchain networks (Ethereum, Bitcoin, Solana, Polygon, BNB, Avalanche,
+    Algorand, Tron, etc.).
+  humanURL: https://docs.tatum.io/reference/rest-api-overview
+  baseURL: https://api.tatum.io/v3/blockchain/node/{chain}/{apiKey}
+  tags:
+  - JSON-RPC
+  - Multi-chain
+  properties:
+  - type: Documentation
+    url: https://docs.tatum.io/reference/rest-api-overview
+- aid: tatum:data-api
+  name: Tatum Data API
+  description: >-
+    REST API for indexed multi-chain blockchain data (balances, NFTs, tokens, transactions, blocks).
+  humanURL: https://docs.tatum.io/reference/rest-api-overview
+  baseURL: https://api.tatum.io/v4/data
+  tags:
+  - REST
+  - Indexing
+  properties:
+  - type: Documentation
+    url: https://docs.tatum.io/reference/rest-api-overview
+- aid: tatum:notifications
+  name: Tatum Notifications API
+  description: REST API for managing webhook subscriptions for blockchain events.
+  humanURL: https://docs.tatum.io/reference/notification-subscriptions
+  baseURL: https://api.tatum.io/v4/subscription
+  tags:
+  - REST
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://docs.tatum.io/reference/notification-subscriptions
+- aid: tatum:nft-api
+  name: Tatum NFT API
+  description: REST API for NFT minting, transfers, metadata, and ownership queries on multiple chains.
+  humanURL: https://docs.tatum.io/reference/nft
+  baseURL: https://api.tatum.io/v3/nft
+  tags:
+  - REST
+  - NFT
+  properties:
+  - type: Documentation
+    url: https://docs.tatum.io/reference/nft
+- aid: tatum:wallet-api
+  name: Tatum Wallet API
+  description: >-
+    REST API to generate wallets, derive addresses, build/sign transactions across many chains.
+  humanURL: https://docs.tatum.io/reference/blockchain-wallet
+  baseURL: https://api.tatum.io/v3
+  tags:
+  - REST
+  - Wallet
+  properties:
+  - type: Documentation
+    url: https://docs.tatum.io/reference/blockchain-wallet
+- aid: tatum:smart-contract-api
+  name: Tatum Smart Contract API
+  description: REST API to deploy, invoke, and read smart contracts on EVM and other chains.
+  humanURL: https://docs.tatum.io/reference/smart-contracts
+  baseURL: https://api.tatum.io/v3
+  tags:
+  - REST
+  - Smart Contracts
+  properties:
+  - type: Documentation
+    url: https://docs.tatum.io/reference/smart-contracts
+- aid: tatum:virtual-accounts
+  name: Tatum Virtual Accounts (Ledger)
+  description: >-
+    REST API for off-chain virtual account ledger with deposit address allocation, transfers, and reconciliation.
+  humanURL: https://docs.tatum.io/reference/virtual-accounts
+  baseURL: https://api.tatum.io/v3/ledger
+  tags:
+  - REST
+  - Ledger
+  - Virtual Accounts
+  properties:
+  - type: Documentation
+    url: https://docs.tatum.io/reference/virtual-accounts
+- aid: tatum:tatum-data-api
+  name: Tatum Data API
+  description: The Data API from Tatum — 4 operation(s) for data.
+  humanURL: https://docs.tatum.io/reference/rest-api-overview
+  baseURL: https://api.tatum.io/v3/blockchain/node/{chain}/{apiKey}
+  tags:
+  - Data
+  properties:
+  - type: OpenAPI
+    url: openapi/tatum-data-api-openapi.yml
+- aid: tatum:tatum-rates-api
+  name: Tatum Rates API
+  description: The Rates API from Tatum — 1 operation(s) for rates.
+  humanURL: https://docs.tatum.io/reference/rest-api-overview
+  baseURL: https://api.tatum.io/v3/blockchain/node/{chain}/{apiKey}
+  tags:
+  - Rates
+  properties:
+  - type: OpenAPI
+    url: openapi/tatum-rates-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/tatum-agentic-access.yml
