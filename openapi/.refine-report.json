@@ -1,0 +1,16 @@
+{
+  "provider": "tatum",
+  "sources": [
+    "tatum-data-api-openapi.yml",
+    "tatum-rates-api-openapi.yml"
+  ],
+  "outputs": [
+    "tatum-data-api-openapi.yml",
+    "tatum-rates-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
