@@ -1,0 +1,347 @@
+{
+  "item": [
+    {
+      "id": "f8237dc7-9f9c-48b6-9668-b0fea06b64d6",
+      "name": "Data",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f6cd2dc2-7c9c-4675-9583-dd8150648ae8",
+          "name": "Get native balance",
+          "request": {
+            "name": "Get native balance",
+            "description": {
+              "content": "Retrieve native balance for a blockchain address.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v4",
+                "data",
+                "blockchains",
+                "balance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50f8090a-7b1c-458d-a173-911859fae028",
+              "name": "Balance details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v4",
+                    "data",
+                    "blockchains",
+                    "balance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "893de587-2fd5-4b24-add3-40ad415e71cb",
+          "name": "Get transaction by hash",
+          "request": {
+            "name": "Get transaction by hash",
+            "description": {
+              "content": "Retrieve transaction details using transaction hash.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v4",
+                "data",
+                "blockchains",
+                "transaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "36773a43-8c1f-4c3d-a10f-2f8e08199914",
+              "name": "Transaction details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v4",
+                    "data",
+                    "blockchains",
+                    "transaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ea853fc-8ca8-4216-9977-c4ee52946ddb",
+          "name": "Get block by hash or height",
+          "request": {
+            "name": "Get block by hash or height",
+            "description": {
+              "content": "Fetch block information by hash or block number.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v4",
+                "data",
+                "blockchains",
+                "block"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "31f08c2f-10f6-4008-8033-f1048b7839c2",
+              "name": "Block details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v4",
+                    "data",
+                    "blockchains",
+                    "block"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ad2c24e-d3af-444f-8ab7-e6f911ba4158",
+          "name": "Get current block height",
+          "request": {
+            "name": "Get current block height",
+            "description": {
+              "content": "Obtain the latest block height for supported blockchains.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v4",
+                "data",
+                "blockchains",
+                "block",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c96f65c0-fbbd-4815-9ce6-4c4e8a783b02",
+              "name": "Current block height",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v4",
+                    "data",
+                    "blockchains",
+                    "block",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.tatum.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "166f4910-d628-452d-9442-1e1f821af11b",
+    "name": "Tatum Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for indexed multi-chain blockchain data including balances,\ntransactions, blocks, and exchange rates. Authentication uses an API\nkey provided in the x-api-key header.\n\n\nContact Support:\n Name: Tatum",
+      "type": "text/plain"
+    }
+  }
+}

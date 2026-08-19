@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tatum Data Rates API",
+    "version": "4.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get exchange rate by symbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tatum.io/v4/data/rate/symbol"
+          },
+          "docs": "Retrieve current exchange rates for crypto/fiat pairs."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
