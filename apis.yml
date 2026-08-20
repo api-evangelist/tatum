@@ -24,6 +24,13 @@ tags:
   - Web3
   - Blockchain
   - RPC
+  - Multi-Chain
+  - Wallets
+  - NFT
+tags_raw:
+  - Web3
+  - Blockchain
+  - RPC
   - Multi-chain
   - Wallet
   - NFT
@@ -39,6 +46,9 @@ apis:
   humanURL: https://docs.tatum.io/reference/rest-api-overview
   baseURL: https://api.tatum.io/v3/blockchain/node/{chain}/{apiKey}
   tags:
+  - JSON-RPC
+  - Multi-Chain
+  tags_raw:
   - JSON-RPC
   - Multi-chain
   properties:
@@ -63,6 +73,9 @@ apis:
   baseURL: https://api.tatum.io/v4/subscription
   tags:
   - REST
+  - Webhook
+  tags_raw:
+  - REST
   - Webhooks
   properties:
   - type: Documentation
@@ -85,6 +98,9 @@ apis:
   humanURL: https://docs.tatum.io/reference/blockchain-wallet
   baseURL: https://api.tatum.io/v3
   tags:
+  - REST
+  - Wallets
+  tags_raw:
   - REST
   - Wallet
   properties:
