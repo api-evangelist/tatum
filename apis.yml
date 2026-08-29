@@ -6,6 +6,18 @@ description: Tatum is a multi-chain Web3 platform offering an RPC Gateway across
   blockchains, indexed Data APIs, Notifications/Webhooks, NFT/Wallet APIs, Smart Contract
   APIs, Virtual Accounts, and a Key Management System (KMS). Both REST and JSON-RPC
   interfaces are available.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
