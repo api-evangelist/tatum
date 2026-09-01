@@ -36,7 +36,7 @@ tags:
   - Web3
   - Blockchain
   - RPC
-  - Multi-chain
+  - Multi-Chain
   - Wallets
   - NFT
 tags_raw:
@@ -59,7 +59,7 @@ apis:
   baseURL: https://api.tatum.io/v3/blockchain/node/{chain}/{apiKey}
   tags:
   - JSON-RPC
-  - Multi-chain
+  - Multi-Chain
   tags_raw:
   - JSON-RPC
   - Multi-chain
