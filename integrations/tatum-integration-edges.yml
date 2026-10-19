@@ -1,0 +1,116 @@
+edges:
+- partner_name: DefiLlama Chainlist (extraRpcs.js)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js
+  category: Public JSON-RPC node endpoint
+  contract_reference:
+    register: DefiLlama Chainlist (extraRpcs.js)
+    standard: JSON-RPC node endpoint listing
+    spec_file: null
+    role: public-rpc-operator
+    registered_name: tatum
+    name_source: register
+    register_id: tatum.io
+    matched_domain: tatum.io
+    matched_by: domain
+    domain_source: rpc host
+    endpoints_sample:
+    - https://ethereum-mainnet.gateway.tatum.io
+    - https://fantom-testnet.gateway.tatum.io/
+    - https://polygon-amoy.gateway.tatum.io
+    chains_sample:
+    - Abstract
+    - Amoy
+    - Arbitrum Nova
+    - Arbitrum One
+    - Aurora Mainnet
+    - Avalanche C-Chain
+    - BNB Smart Chain Mainnet
+    - Base
+    signal_note: 'listing only: per-chain entries are context, never counted; breadth is not credit; the register
+      certifies nothing, so no certified_products'
+    detected_by: sweep-blockchain-rpc.py
+    detected: '2026-10-18'
+    tracking_labels:
+    - limited
+    - none
+    - 'yes'
+  detected_by: sweep-blockchain-rpc.py
+  first_seen: '2026-10-18'
+- partner_name: ethereum-lists/chains (chainid.network)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://chainid.network/chains.json
+  category: Public JSON-RPC node endpoint
+  contract_reference:
+    register: ethereum-lists/chains (chainid.network)
+    standard: JSON-RPC node endpoint listing
+    spec_file: null
+    role: public-rpc-operator
+    registered_name: tatum
+    name_source: host label
+    register_id: tatum.io
+    matched_domain: tatum.io
+    matched_by: domain
+    domain_source: rpc host
+    endpoints_sample:
+    - https://01-gravelines-003-01.rpc.tatum.io/ext/bc/C/rpc
+    - https://01-vinthill-003-02.rpc.tatum.io/ext/bc/C/rpc
+    - https://01-gravelines-004-01.rpc.tatum.io/ext/bc/C/rpc
+    chains_sample:
+    - Flare Mainnet
+    - Flare Testnet Coston2
+    - Songbird Canary-Network
+    - Songbird Testnet Coston
+    signal_note: 'listing only: per-chain entries are context, never counted; breadth is not credit; the register
+      certifies nothing, so no certified_products'
+    detected_by: sweep-blockchain-rpc.py
+    detected: '2026-10-18'
+  detected_by: sweep-blockchain-rpc.py
+  first_seen: '2026-10-18'
+- partner_name: Ethereum JSON-RPC (execution-apis)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: compatible
+  shape: ethereum-json-rpc
+  degree: listed
+  evidence_kind: register-listing
+  report_only: true
+  direction: partner-built
+  evidence: https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js
+  note: an EVM chain's public RPC list carries this provider's endpoint; a listing, not a conformance test. REPORT
+    ONLY (compatible edges are never in depth or position)
+  contract_reference:
+    register: Chainlist / ethereum-lists EVM RPC listings
+    spec_file: https://github.com/ethereum/execution-apis
+    role: evm-json-rpc-endpoint
+    matched_domain: tatum.io
+    endpoints_sample:
+    - https://ethereum-mainnet.gateway.tatum.io
+    - https://fantom-testnet.gateway.tatum.io/
+    signal_note: report only
+    detected_by: sweep-blockchain-rpc.py
+    detected: '2026-10-18'
+  detected_by: sweep-blockchain-rpc.py
+  first_seen: '2026-10-18'
+generated: '2026-10-18'
+method: searched
+source:
+- https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js
+- https://chainid.network/chains.json
+- https://github.com/cosmos/chain-registry
+checked:
+- https://chainid.network/chains.json
+- https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js
+- https://github.com/cosmos/chain-registry
